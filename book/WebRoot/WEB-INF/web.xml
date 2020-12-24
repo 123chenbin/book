@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>book</display-name>
+
+  <!-- 普通用户的登录过滤 -->
+
+  <filter>
+  	<filter-name>userchecklogin</filter-name>
+  	<filter-class>com.util.usercheckloginfilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>userchecklogin</filter-name>
+  	<url-pattern>/orderlist.jsp</url-pattern>
+  	<url-pattern>/addorder.jsp</url-pattern>
+  	<url-pattern>/orderdetail.jsp</url-pattern>
+  	<url-pattern>/shopping.jsp</url-pattern> 
+  	<url-pattern>/index.jsp</url-pattern>
+  	<url-pattern>/index.jsp</url-pattern>
+  	<url-pattern>/queryajax.jsp</url-pattern>
+  </filter-mapping>
+
+
+  
+
+  <!-- 管理员的登录过滤 -->
+  <filter>
+  	<filter-name>adminchecklogin</filter-name>
+  	<filter-class>com.util.adminloginfilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>adminchecklogin</filter-name>
+  	<url-pattern>/back/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserAction</servlet-name>
+    <servlet-class>com.web.UserAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>UpBookNumAction</servlet-name>
+    <servlet-class>com.web.UpBookNumAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelCartBookAction</servlet-name>
+    <servlet-class>com.web.DelCartBookAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>addBookAction</servlet-name>
+    <servlet-class>com.web.addBookAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadImgAction</servlet-name>
+    <servlet-class>com.web.UploadImgAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>delBookAction</servlet-name>
+    <servlet-class>com.web.delBookAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>listorder</servlet-name>
+    <servlet-class>com.web.listorder</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>modorderAction</servlet-name>
+    <servlet-class>com.web.modorderAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addorderAction</servlet-name>
+    <servlet-class>com.web.addorderAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>modBookAction</servlet-name>
+    <servlet-class>com.web.modBookAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+
+    <servlet-name>AddShopCartAction</servlet-name>
+    <servlet-class>com.web.AddShopCartAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>backaddAjax</servlet-name>
+    <servlet-class>com.web.backaddAjax</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckAction</servlet-name>
+    <servlet-class>com.web.CheckAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterCheckAction</servlet-name>
+    <servlet-class>com.web.RegisterCheckAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserManageAction</servlet-name>
+    <servlet-class>com.web.UserManageAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>firstpagemohuAction</servlet-name>
+    <servlet-class>com.web.firstpagemohuAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminAction</servlet-name>
+    <servlet-class>com.web.AdminAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AdminRegisterAction</servlet-name>
+    <servlet-class>com.web.AdminRegisterAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>bklistorder</servlet-name>
+    <servlet-class>com.web.bklistorder</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SumPriceAction</servlet-name>
+    <servlet-class>com.web.SumPriceAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SkipCheck</servlet-name>
+    <servlet-class>com.web.SkipCheck</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>pagelistAction</servlet-name>
+    <servlet-class>pagelistAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BackPagelistAction</servlet-name>
+    <servlet-class>com.web.BackPagelistAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>qtpageAction</servlet-name>
+    <servlet-class>com.web.qtpageAction</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>bkorderlist</servlet-name>
+    <servlet-class>com.web.bkorderlist</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>userMessage</servlet-name>
+    <servlet-class>com.web.userMessage</servlet-class>
+  </servlet>
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MoHuSelectBookAction</servlet-name>
+    <servlet-class>com.web.MoHuSelectBookAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addmessage</servlet-name>
+    <servlet-class>com.web.addmessage</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>adminmessage</servlet-name>
+    <servlet-class>com.web.adminmessage</servlet-class>
+  </servlet>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UserAction</servlet-name>
+    <url-pattern>/UserAction</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>UpBookNumAction</servlet-name>
+    <url-pattern>/upnum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelCartBookAction</servlet-name>
+    <url-pattern>/dodelbook</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet-mapping>
+
+    <servlet-name>addBookAction</servlet-name>
+    <url-pattern>/addBook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadImgAction</servlet-name>
+    <url-pattern>/UploadImg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>delBookAction</servlet-name>
+    <url-pattern>/dodelBook</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>listorder</servlet-name>
+    <url-pattern>/listorder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>modorderAction</servlet-name>
+    <url-pattern>/modorder</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>addorderAction</servlet-name>
+    <url-pattern>/addorder</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>modBookAction</servlet-name>
+    <url-pattern>/modBook</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+
+    <servlet-name>AddShopCartAction</servlet-name>
+    <url-pattern>/addbook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>backaddAjax</servlet-name>
+    <url-pattern>/backadd</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CheckAction</servlet-name>
+    <url-pattern>/CheckAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterCheckAction</servlet-name>
+    <url-pattern>/RegisterCheckAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserManageAction</servlet-name>
+    <url-pattern>/UserManageAction</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>firstpagemohuAction</servlet-name>
+    <url-pattern>/firstpagemohu</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AdminAction</servlet-name>
+    <url-pattern>/AdminAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminRegisterAction</servlet-name>
+    <url-pattern>/AdminRegisterAction</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>bklistorder</servlet-name>
+    <url-pattern>/bklistorder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SumPriceAction</servlet-name>
+    <url-pattern>/sumprice</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SkipCheck</servlet-name>
+    <url-pattern>/SkipCheck</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>BackPagelistAction</servlet-name>
+    <url-pattern>/BackPagelist</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>qtpageAction</servlet-name>
+    <url-pattern>/qtpage</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>bkorderlist</servlet-name>
+    <url-pattern>/bkorderlist</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>userMessage</servlet-name>
+    <url-pattern>/userMessage</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MoHuSelectBookAction</servlet-name>
+    <url-pattern>/mhsbook</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addmessage</servlet-name>
+    <url-pattern>/addmessage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adminmessage</servlet-name>
+    <url-pattern>/adminmessage</url-pattern>
+  </servlet-mapping>
+
+
+
+
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
